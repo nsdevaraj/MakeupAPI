@@ -1,0 +1,18 @@
+script(type='text/javascript', src='/javascripts/jquery.js')
+
+h1 Your Providers
+
+p
+  a(class='button', href='/providers/new') + New Provider
+
+ul
+  - for (var provider in providers)
+    - provider = providers[provider]
+    li
+      =provider.name
+      a(class='button', href='/providers/edit/' + provider.id) Edit
+      form(method='post', action='/providers/' + provider.id)
+        input(name='_method', value='delete', type='hidden')
+        input(type='submit', value='Delete') 
+
+

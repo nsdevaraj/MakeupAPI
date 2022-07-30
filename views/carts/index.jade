@@ -1,0 +1,18 @@
+script(type='text/javascript', src='/javascripts/jquery.js')
+
+h1 Your Carts
+
+p
+  a(class='button', href='/carts/new') + New Cart
+
+ul
+  - for (var cart in carts)
+    - cart = carts[cart]
+    li
+      =cart.name
+      a(class='button', href='/carts/edit/' + cart.id) Edit
+      form(method='post', action='/carts/' + cart.id)
+        input(name='_method', value='delete', type='hidden')
+        input(type='submit', value='Delete') 
+
+

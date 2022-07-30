@@ -1,0 +1,42 @@
+h2 New Makeup
+form(method='post', action='/makeups')
+  div
+    label Name:
+      input(name='name', value='')
+  div
+    label UserID:
+      input(name='muserid', value='')
+  div
+    label InstanceID:
+      input(name='instanceid', value='')
+  div
+    label Product ID:
+      input(name='productid', value='')  
+    label Alpha:
+      textarea(name='productalpha', value="" )
+  div
+    label Product ID:
+      input(name='productid', value='')  
+    label Alpha:
+      textarea(name='productalpha', value="" )
+  div
+    label Product ID:
+      input(name='productid', value='')  
+    label Alpha:
+      textarea(name='productalpha', value="" )	
+      
+  div
+    input(type='submit', value='New Makeup')
+    
+
+h2 Image Form
+form(method='post', action='/fbuploads')
+  div
+    label UserID:
+      input(type='hidden', name='name', value='1630451060')
+  div
+    label Image Path:
+      input(name='fbsrc', value='')
+
+  div
+    input(type='submit', value='New Photo')

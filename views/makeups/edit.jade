@@ -1,0 +1,24 @@
+h2 Edit Makeup
+form(method='post', action='/makeups/' + makeup._id)
+  input(name='id', value=makeup._id, type='hidden')
+  input(name='_method', value='POST', type='hidden')
+  div
+    label Name:
+      input(name='name', value=makeup.name || '')
+  div
+    label Product ID:
+      input(name='productid', value=makeup.products[0].productId)  
+    label Alpha:
+      input(name='productalpha', value=makeup.products[0].alphaValue )
+  div
+    label Product ID:
+      input(name='productid', value=makeup.products[1].productId)  
+    label Alpha:
+      input(name='productalpha', value=makeup.products[1].alphaValue )
+  div
+    label Product ID:
+      input(name='productid', value=makeup.products[2].productId)  
+    label Alpha:
+      input(name='productalpha', value=makeup.products[2].alphaValue )	  
+  div
+    input(type='submit', value='Save')

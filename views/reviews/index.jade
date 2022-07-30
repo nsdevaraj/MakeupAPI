@@ -1,0 +1,20 @@
+script(type='text/javascript', src='/javascripts/jquery.js')
+
+h1 Your Reviews
+
+p
+  a(class='button', href='/review/new') + New Review
+
+ul
+  - for (var review in reviews)
+    - review = reviews[review]
+    li
+      =review.comment
+      a(class='button', href='/reviews/edit/' + review.id ) Edit
+      form(method='post', action='/reviews/' + review.id)
+        input(name='_method', value='delete', type='hidden')
+        input(type='submit', value='Delete') 
+      a(href='/reviews/' + review.id)
+        =review.comment
+
+

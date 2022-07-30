@@ -1,0 +1,18 @@
+script(type='text/javascript', src='/javascripts/jquery.js')
+
+h1 Your Providers
+
+p
+  a(class='button', href='/instances/new') + New Instance
+
+ul
+  - for (var instance in instances)
+    - instance =instances[instance]
+    li
+      =instance.sname
+      a(class='button', href='/instances/edit/' + instance.id) Edit
+      form(method='post', action='/instances/' + instance.id)
+        input(name='_method', value='delete', type='hidden')
+        input(type='submit', value='Delete') 
+
+

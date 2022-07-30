@@ -1,0 +1,54 @@
+{
+  "name": "Glitz",
+  "preferGlobal": "true",
+  "version": "0.1.0-6",
+  "author": "Devaraj <nsdevaraj@gmail.com>",
+  "description": "Backend server for Glitz",
+  "contributors": [
+    {
+      "name": "Shaivya Eswaran",
+      "email": "shaivya.easwaran@cognizant.com"
+    }
+  ],
+  "bin": {
+    "Glitz": "./app.js"
+  },
+  "scripts": {
+    "start": "node ./app.js",
+    "predeploy": "echo This will be run before deploying the app",
+    "postdeploy": "echo This will be run after deploying the app"
+  },
+  "keywords": [
+    "cli",
+    "http",
+    "server"
+  ],
+  "dependencies": {
+    "express": "3.2.0"
+    , "jade": "0.29.0"
+    , "nodefly": "0.1.36"
+    , "mongoose": "3.6.7"
+    , "connect-mongo": "0.3.2"
+    , "connect-flash": "0.1.0"
+    , "passport": "latest"
+    , "passport-local": "latest"
+    , "passport-facebook": "latest"
+    , "passport-twitter": "latest"
+    , "passport-github": "latest"
+    , "passport-google-oauth": "latest"
+    , "imager": "0.1.9"
+    , "notifier": "0.0.3"
+    , "underscore": "1.4.4"
+    , "gzippo": "0.2.0"
+    , "async": "0.2.7"
+    , "nodemon": "0.7.6"
+    , "view-helpers": "0.0.3"
+    , "fb": "latest"
+  },
+  "subdomain": "Glitz",
+  "analyze": false,
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.8"
+  }
+}

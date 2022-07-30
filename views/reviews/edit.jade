@@ -1,0 +1,13 @@
+h2 Edit Review
+form(method='post', action='/reviews/' + review._id)
+  input(name='id', value=review._id, type='hidden')
+  input(name='_method', value='PUT', type='hidden')
+  div
+    label Rating:
+      input(name='rating', value=review.rating || '')
+  div
+    label Comment:
+      textarea(name='comment')
+        =review.comment || '' 
+  div
+    input(type='submit', value='Save')

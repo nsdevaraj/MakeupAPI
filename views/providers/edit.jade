@@ -1,0 +1,9 @@
+h2 Edit Provider
+form(method='post', action='/providers/' + provider._id)
+  input(name='provider[id]', value=provider._id, type='hidden')
+  input(name='_method', value='PUT', type='hidden')
+  div
+    label Name:
+      input(name='name', value=provider.name || '')
+  div
+    input(type='submit', value='Save')

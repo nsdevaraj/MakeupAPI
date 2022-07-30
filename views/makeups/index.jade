@@ -1,0 +1,18 @@
+script(type='text/javascript', src='/javascripts/jquery.js')
+
+h1 Your Makeups
+
+p
+  a(class='button', href='/makeups/new') + New Makeup
+
+ul
+  - for (var makeup in makeups)
+    - makeup = makeups[makeup]
+    li
+      =makeup.name
+      a(class='button', href='/makeups/edit/' + makeup.id) Edit
+      form(method='post', action='/makeups/' + makeup.id)
+        input(name='_method', value='delete', type='hidden')
+        input(type='submit', value='Delete') 
+
+

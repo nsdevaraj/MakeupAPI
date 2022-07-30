@@ -1,0 +1,9 @@
+h2 Edit Instance
+form(method='post', action='/instances/' + instance._id)
+  input(name='id', value=instance._id, type='hidden')
+  input(name='_method', value='PUT', type='hidden')
+  div
+    label Code:
+      = instance.code
+  div
+    input(type='submit', value='Register')

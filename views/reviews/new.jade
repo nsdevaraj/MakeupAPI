@@ -1,0 +1,17 @@
+h2 New Review
+form(method='post', action='/reviews')
+  div
+    label User ID:
+      input(name='userid', value='')
+  div
+    label Rating:
+      input(name='rating', value='')
+  div
+    label Comment:
+      textarea(name='comment')
+        = '' 	
+  div
+    label Product ID:
+      input(name='productid', value='')	
+  div
+    input(type='submit', value='Create')
